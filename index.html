@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form">
+            <div class="title">
+                <h1>Notes des stagiaires</h1>
+            </div>
+            <fieldset>
+                <legend>Nouvelle ligne</legend>
+                <div class="form-row">
+                    <label for="id">ID :</label>
+                    <input type="text" name="id" id="id">
+                    <span class="error-msg" id="id-error"></span>
+                    <button id="lire">Lire</button>
+                </div>
+                <div class="form-row">
+                    <label for="nom">Nom :</label>
+                    <input type="text" name="nom" id="nom">
+                    <span class="error-msg" id="nom-error"></span>
+                </div>
+                <div class="form-row">
+                    <label for="filiere">Filière :</label>
+                    <input type="radio" name="filiere" id="tdi"><label for="tdi">TDI</label>
+                    <input type="radio" name="filiere" id="tdm"><label for="TDM">TDM</label>
+                    <input type="radio" name="filiere" id="tri"><label for="TRI">TRI</label>
+                </div>
+                <div class="form-row">
+                    <label for="note">Note :</label>
+                    <input type="text" name="note" id="note">
+                    <span class="error-msg" id="note-error"></span>
+                </div>
+                <div>
+                    <button id="ajouter" type="submit">Ajouter la note</button>
+                    <button id="save">Enregistrer</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <h1>Liste des notes</h1>
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOM</th>
+                    <th>NOTE</th>
+                    <th>FILIERE</th>
+                    <th>GESTION</th>
+                </tr>
+            </thead>
+            <tbody id="tdata"   >
+                <tr>
+                    <th>1</th>
+                    <td>Alami Hicham</td>
+                    <td class="note">8</td>
+                    <td>TDI</td>
+                    <td><button class="btn-supprimer">Supprimer</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="2" id="best">LA MEILLEURE NOTE</th>
+                    <td id="best-note"></td>
+                    <td colspan="2"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
