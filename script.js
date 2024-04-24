@@ -92,8 +92,9 @@ function save(e) {
     let stagiaire = new Stagiaire(idV, nomV, noteV, filiereV)
     stagiaires.push(stagiaire)
     console.log(stagiaires)
+    
     add()
-    actualiserMaxNote()
+   
 
 }
 
@@ -147,6 +148,7 @@ noteCells.forEach(cell => {
             row.remove();
         });
     });
+    actualiserMaxNote()
 }
 
 
